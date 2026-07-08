@@ -9,16 +9,20 @@ const App = () => {
   return (
     <div>
       <h2>Phonebook</h2>
-      <form>
+      <form onSubmit={(e) => {
+        e.preventDefault()
+        setPersons(persons.concat({ name: newName }))
+        setNewName('')
+      }}>
         <div>
-          name: <input />
+          name: <input value={newName} onChange={(e) => setNewName(e.target.value)} />
         </div>
         <div>
           <button type="submit">add</button>
         </div>
       </form>
       <h2>Numbers</h2>
-      ...
+      {persons.map((person, i) => <p key={i}>{person.name}</p>)}
     </div>
   )
 }
