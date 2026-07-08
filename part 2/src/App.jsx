@@ -23,7 +23,7 @@ const App = () => {
       
         </div>
         <div>
-          number : <input />
+          numbers : <input />
       
         </div>
         <div>
