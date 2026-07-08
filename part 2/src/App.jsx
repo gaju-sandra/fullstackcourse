@@ -33,6 +33,6 @@ const App = () => {
   }
 
   return <Course course={course} />
-}
+}//same with 2.3
 
 export default App
