@@ -11,6 +11,10 @@ const App = () => {
       <h2>Phonebook</h2>
       <form onSubmit={(e) => {
         e.preventDefault()
+        if (persons.some(p => p.name === newName)) {
+          alert(`${newName} is already added to phonebook`)
+          return
+        }
         setPersons(persons.concat({ name: newName }))
         setNewName('')
       }}>
